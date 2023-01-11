@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             
             //Открываем след VC
             performSegue(withIdentifier: "showProfile", sender: nil)
+            
         } else {
             //Показываем Алерт
             self.present(alert.Show(), animated: true)
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ProfileViewController {
-            vc.tel = phoneNumberField.text ?? ""
+            vc.phone = phoneNumberField.text ?? ""
             vc.pass = passwordField.text ?? ""
         }
     }

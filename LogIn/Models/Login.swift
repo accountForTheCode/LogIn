@@ -6,8 +6,8 @@
 //
 
 struct Login {
-    let phoneNumber: String
-    let password: String
+    var phoneNumber: String?
+    var password: String?
 }
 
 extension Login {

@@ -59,7 +59,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="enterButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lzl-Tz-4hO"/>
-                                    <segue destination="Jwp-te-d0I" kind="show" identifier="showProfile" id="LaY-ep-AaB"/>
+                                    <segue destination="fJs-IO-dCW" kind="show" identifier="showProfile" id="zkB-aR-JwI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-mo-yEu">
@@ -168,7 +168,7 @@
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="los-Ls-f0C"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                                         <connections>
                                                             <action selector="nameTextFieldAction:" destination="fJs-IO-dCW" eventType="editingDidEnd" id="eBS-BP-8xj"/>
                                                         </connections>
@@ -237,7 +237,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="8g9-op-rz4"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-QH-H2S">
-                                <rect key="frame" x="16" y="401" width="288" height="45"/>
+                                <rect key="frame" x="16" y="450" width="288" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="ZKa-tC-klq"/>
                                 </constraints>
@@ -272,9 +272,13 @@
                     <tabBarItem key="tabBarItem" title="Профиль" image="Profile" id="MKx-bF-Pdn">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="Mbf-N6-sVr"/>
                     <connections>
+                        <outlet property="aboutInput" destination="f6n-mT-hBG" id="xBE-DM-Kif"/>
+                        <outlet property="nameInput" destination="mgY-gs-Xun" id="6Gi-X0-glR"/>
                         <outlet property="nameLable" destination="XzL-ZE-mLh" id="r9d-kE-MBO"/>
                         <outlet property="saveButton" destination="u3x-QH-H2S" id="FBa-yL-fr6"/>
+                        <outlet property="surNameInput" destination="pvD-qE-ePk" id="9OL-b7-1v0"/>
                     </connections>
                 </viewController>
             </objects>
@@ -300,6 +304,9 @@
             <point key="canvasLocation" x="68" y="986"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zkB-aR-JwI"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="BackgroundProfile" width="320" height="82"/>
         <image name="Profile" width="20" height="20"/>
