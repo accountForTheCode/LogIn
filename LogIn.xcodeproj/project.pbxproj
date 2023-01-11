@@ -13,6 +13,10 @@
 		D5C14318296AE18200C24CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C14316296AE18200C24CFF /* Main.storyboard */; };
 		D5C1431A296AE18300C24CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C14319296AE18300C24CFF /* Assets.xcassets */; };
 		D5C1431D296AE18300C24CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C1431B296AE18300C24CFF /* LaunchScreen.storyboard */; };
+		D5C14328296AE1F700C24CFF /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C14327296AE1F700C24CFF /* Login.swift */; };
+		D5C1432A296C991B00C24CFF /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C14329296C991B00C24CFF /* Alerts.swift */; };
+		D5C1432C296CA08400C24CFF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C1432B296CA08400C24CFF /* ProfileViewController.swift */; };
+		D5C1432E296CA30400C24CFF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C1432D296CA30400C24CFF /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		D5C14319296AE18300C24CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5C1431C296AE18300C24CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5C1431E296AE18300C24CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5C14327296AE1F700C24CFF /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		D5C14329296C991B00C24CFF /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		D5C1432B296CA08400C24CFF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D5C1432D296CA30400C24CFF /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		D5C1430F296AE18200C24CFF /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				D5C14324296AE19800C24CFF /* Models */,
+				D5C14325296AE1B900C24CFF /* Views */,
+				D5C14326296AE1C700C24CFF /* Controllers */,
 				D5C14310296AE18200C24CFF /* AppDelegate.swift */,
 				D5C14312296AE18200C24CFF /* SceneDelegate.swift */,
-				D5C14314296AE18200C24CFF /* ViewController.swift */,
-				D5C14316296AE18200C24CFF /* Main.storyboard */,
 				D5C14319296AE18300C24CFF /* Assets.xcassets */,
-				D5C1431B296AE18300C24CFF /* LaunchScreen.storyboard */,
 				D5C1431E296AE18300C24CFF /* Info.plist */,
 			);
 			path = LogIn;
+			sourceTree = "<group>";
+		};
+		D5C14324296AE19800C24CFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5C14327296AE1F700C24CFF /* Login.swift */,
+				D5C14329296C991B00C24CFF /* Alerts.swift */,
+				D5C1432D296CA30400C24CFF /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5C14325296AE1B900C24CFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5C14316296AE18200C24CFF /* Main.storyboard */,
+				D5C1431B296AE18300C24CFF /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5C14326296AE1C700C24CFF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5C14314296AE18200C24CFF /* ViewController.swift */,
+				D5C1432B296CA08400C24CFF /* ProfileViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C1432C296CA08400C24CFF /* ProfileViewController.swift in Sources */,
 				D5C14315296AE18200C24CFF /* ViewController.swift in Sources */,
 				D5C14311296AE18200C24CFF /* AppDelegate.swift in Sources */,
+				D5C1432E296CA30400C24CFF /* Profile.swift in Sources */,
 				D5C14313296AE18200C24CFF /* SceneDelegate.swift in Sources */,
+				D5C1432A296C991B00C24CFF /* Alerts.swift in Sources */,
+				D5C14328296AE1F700C24CFF /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

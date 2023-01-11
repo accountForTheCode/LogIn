@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVi-x1-a9b">
+                                <rect key="frame" x="16" y="98" width="66.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.55294117647058827" green="0.59999999999999998" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="+7 999 999 99 99" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="jXF-ya-jPl">
+                                <rect key="frame" x="16" y="123.5" width="288" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="d2h-6y-Y1X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTU-4F-XxK">
+                                <rect key="frame" x="16" y="184.5" width="57" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.55294117649999996" green="0.59999999999999998" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Apa-5o-oFD">
+                                <rect key="frame" x="16" y="210" width="288" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="mJL-xx-LmU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <imageReference key="background" image="eye.slash" catalog="system" symbolScale="medium"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q02-lg-1oU">
+                                <rect key="frame" x="16" y="289" width="288" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="ECz-7N-88G"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="ruD-dK-ulw"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14117647058823529" green="0.41568627450980389" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Войти" subtitle="">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lzl-Tz-4hO"/>
+                                    <segue destination="Jwp-te-d0I" kind="show" identifier="showProfile" id="LaY-ep-AaB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-mo-yEu">
+                                <rect key="frame" x="132" y="20" width="57" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABJ-oS-Xkq">
+                                <rect key="frame" x="90" y="350" width="141" height="28"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Забыли пароль">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ABJ-oS-Xkq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9nY-LY-fr4"/>
+                            <constraint firstItem="TK8-mo-yEu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ALD-eP-wEW"/>
+                            <constraint firstItem="qTU-4F-XxK" firstAttribute="top" secondItem="jXF-ya-jPl" secondAttribute="bottom" constant="16" id="B66-e4-Imj"/>
+                            <constraint firstItem="qTU-4F-XxK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dxa-9h-FnD"/>
+                            <constraint firstItem="jXF-ya-jPl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="M72-eR-xaa"/>
+                            <constraint firstItem="Apa-5o-oFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="N43-Vb-eKT"/>
+                            <constraint firstItem="Apa-5o-oFD" firstAttribute="top" secondItem="qTU-4F-XxK" secondAttribute="bottom" constant="8" id="PiX-cl-yKj"/>
+                            <constraint firstItem="TK8-mo-yEu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qhh-NF-RL3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Apa-5o-oFD" secondAttribute="trailing" constant="16" id="QxQ-4D-oVF"/>
+                            <constraint firstItem="jXF-ya-jPl" firstAttribute="top" secondItem="mVi-x1-a9b" secondAttribute="bottom" constant="8" id="SqH-NG-ve3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q02-lg-1oU" secondAttribute="trailing" constant="16" id="UqD-V9-Yoa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jXF-ya-jPl" secondAttribute="trailing" constant="16" id="X0F-o5-UrB"/>
+                            <constraint firstItem="mVi-x1-a9b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZjZ-ka-T7D"/>
+                            <constraint firstItem="mVi-x1-a9b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="lhc-GV-AwC"/>
+                            <constraint firstItem="q02-lg-1oU" firstAttribute="top" secondItem="Apa-5o-oFD" secondAttribute="bottom" constant="34" id="w8J-YO-8ec"/>
+                            <constraint firstItem="q02-lg-1oU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yCu-u7-Jkh"/>
+                            <constraint firstItem="ABJ-oS-Xkq" firstAttribute="top" secondItem="q02-lg-1oU" secondAttribute="bottom" constant="16" id="zub-CG-EIe"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="passwordField" destination="Apa-5o-oFD" id="lbc-jt-gkY"/>
+                        <outlet property="phoneNumberField" destination="jXF-ya-jPl" id="hRw-Zd-Rte"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-555" y="96"/>
+        </scene>
+        <!--Изменить пароль-->
+        <scene sceneID="ALv-nT-Tzk">
+            <objects>
+                <viewController id="1mJ-2E-sHw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wBa-4H-0dc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="prO-5Q-Ifu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Изменить пароль" id="Xhf-eR-64B">
+                        <imageReference key="image" image="wallet.pass" catalog="system" symbolScale="small"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30L-kW-6if" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="1374"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="uYH-Wo-Kwu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXd-ve-14q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController modalPresentationStyle="fullScreen" id="fJs-IO-dCW" customClass="ProfileViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YTL-oe-Xgk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundProfile" translatesAutoresizingMaskIntoConstraints="NO" id="da1-kh-P24">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя пока не введено" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzL-ZE-mLh">
+                                <rect key="frame" x="16" y="98" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpH-eh-Yrd">
+                                <rect key="frame" x="0.0" y="163" width="320" height="407"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="WWV-4U-vd5">
+                                        <rect key="frame" x="16" y="16" width="288" height="247.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="n5O-TQ-Di8">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="72.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co1-Mf-Hmy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="textColor" red="0.55294117649999996" green="0.59999999999999998" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="Введите имя" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="mgY-gs-Xun">
+                                                        <rect key="frame" x="0.0" y="27.5" width="288" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="Uu7-fO-3K5"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="los-Ls-f0C"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                        <connections>
+                                                            <action selector="nameTextFieldAction:" destination="fJs-IO-dCW" eventType="editingDidEnd" id="eBS-BP-8xj"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="GeA-uQ-0ME">
+                                                <rect key="frame" x="0.0" y="90.5" width="288" height="69.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRN-1u-BZa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="textColor" red="0.55294117649999996" green="0.59999999999999998" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="Введите фамилию" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="pvD-qE-ePk">
+                                                        <rect key="frame" x="0.0" y="24.5" width="288" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="ZZ7-g0-uj4"/>
+                                                            <constraint firstAttribute="height" constant="45" id="upB-cZ-dw6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                                        <imageReference key="background" image="eye.slash" catalog="system" symbolScale="medium"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="maA-nn-Zdk">
+                                                <rect key="frame" x="0.0" y="178" width="288" height="69.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О себе:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2V-0x-6e3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="textColor" red="0.55294117649999996" green="0.59999999999999998" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="Введите информацию о себе" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="f6n-mT-hBG">
+                                                        <rect key="frame" x="0.0" y="24.5" width="288" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="VS6-mF-CAX"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="bjR-uc-003"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                                        <imageReference key="background" image="eye.slash" catalog="system" symbolScale="medium"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GeA-uQ-0ME" firstAttribute="leading" secondItem="WWV-4U-vd5" secondAttribute="leading" id="0Yo-z5-dDu"/>
+                                            <constraint firstItem="maA-nn-Zdk" firstAttribute="leading" secondItem="WWV-4U-vd5" secondAttribute="leading" id="8mB-Se-ALd"/>
+                                            <constraint firstAttribute="trailing" secondItem="n5O-TQ-Di8" secondAttribute="trailing" id="DYj-iA-Gmc"/>
+                                            <constraint firstAttribute="trailing" secondItem="maA-nn-Zdk" secondAttribute="trailing" id="xCR-0f-YYo"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WWV-4U-vd5" firstAttribute="leading" secondItem="8g9-op-rz4" secondAttribute="leading" constant="16" id="ANd-dN-jyP"/>
+                                    <constraint firstAttribute="bottom" secondItem="WWV-4U-vd5" secondAttribute="bottom" constant="143.5" id="FgK-1B-GUM"/>
+                                    <constraint firstItem="8g9-op-rz4" firstAttribute="bottom" secondItem="WWV-4U-vd5" secondAttribute="bottom" constant="143.5" id="MTG-Rh-2aL"/>
+                                    <constraint firstAttribute="trailing" secondItem="WWV-4U-vd5" secondAttribute="trailing" constant="24" id="ozp-gG-BGY"/>
+                                    <constraint firstItem="WWV-4U-vd5" firstAttribute="top" secondItem="8g9-op-rz4" secondAttribute="top" constant="16" id="x9F-Px-9Yi"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nfQ-RD-qhG"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="8g9-op-rz4"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-QH-H2S">
+                                <rect key="frame" x="16" y="401" width="288" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="ZKa-tC-klq"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14117647059999999" green="0.41568627450000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить" subtitle="">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uxg-9e-Abg"/>
+                                    <action selector="saveButtonAction:" destination="fJs-IO-dCW" eventType="touchUpInside" id="PEm-iL-j02"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xbg-4H-Mq4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="da1-kh-P24" firstAttribute="top" secondItem="xbg-4H-Mq4" secondAttribute="top" id="0d4-ty-7cg"/>
+                            <constraint firstAttribute="trailing" secondItem="tpH-eh-Yrd" secondAttribute="trailing" id="COS-Nj-Mqs"/>
+                            <constraint firstItem="tpH-eh-Yrd" firstAttribute="leading" secondItem="YTL-oe-Xgk" secondAttribute="leading" id="DyX-EP-UgE"/>
+                            <constraint firstItem="xbg-4H-Mq4" firstAttribute="trailing" secondItem="u3x-QH-H2S" secondAttribute="trailing" constant="16" id="E4Z-cB-Ivn"/>
+                            <constraint firstItem="da1-kh-P24" firstAttribute="leading" secondItem="xbg-4H-Mq4" secondAttribute="leading" id="Ee9-u9-aFy"/>
+                            <constraint firstItem="xbg-4H-Mq4" firstAttribute="bottom" secondItem="u3x-QH-H2S" secondAttribute="bottom" constant="24" id="JYX-Iq-D0Q"/>
+                            <constraint firstItem="da1-kh-P24" firstAttribute="trailing" secondItem="xbg-4H-Mq4" secondAttribute="trailing" id="RNk-jC-Of9"/>
+                            <constraint firstItem="tpH-eh-Yrd" firstAttribute="top" secondItem="XzL-ZE-mLh" secondAttribute="bottom" constant="44.5" id="bm9-OF-gwB"/>
+                            <constraint firstItem="xbg-4H-Mq4" firstAttribute="trailing" secondItem="XzL-ZE-mLh" secondAttribute="trailing" constant="16" id="h4a-hm-yT9"/>
+                            <constraint firstItem="u3x-QH-H2S" firstAttribute="leading" secondItem="xbg-4H-Mq4" secondAttribute="leading" constant="16" id="ivP-aZ-7oe"/>
+                            <constraint firstItem="XzL-ZE-mLh" firstAttribute="leading" secondItem="xbg-4H-Mq4" secondAttribute="leading" constant="16" id="m7K-DT-ug5"/>
+                            <constraint firstItem="XzL-ZE-mLh" firstAttribute="top" secondItem="da1-kh-P24" secondAttribute="bottom" constant="16" id="rDf-ww-dkd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="Profile" id="MKx-bF-Pdn">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="nameLable" destination="XzL-ZE-mLh" id="r9d-kE-MBO"/>
+                        <outlet property="saveButton" destination="u3x-QH-H2S" id="FBa-yL-fr6"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="832.5" y="691.90140845070425"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pr8-Q7-VmZ">
+            <objects>
+                <tabBarController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="Jwp-te-d0I" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Fkw-2Z-le5"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wwi-Hj-bng">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fJs-IO-dCW" kind="relationship" relationship="viewControllers" id="HqF-Fn-e06"/>
+                        <segue destination="1mJ-2E-sHw" kind="relationship" relationship="viewControllers" id="KTt-PQ-P6y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMW-NH-ToU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="986"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackgroundProfile" width="320" height="82"/>
+        <image name="Profile" width="20" height="20"/>
+        <image name="eye.slash" catalog="system" width="128" height="84"/>
+        <image name="wallet.pass" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
