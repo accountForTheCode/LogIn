@@ -7,12 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var phoneNumberField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     var alert = Alert(title: "Ошибка", description: "Логин или пароль введены не верно")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,22 +24,32 @@ class ViewController: UIViewController {
         let login = Login(phoneNumber: phoneNumberField.text ?? "", password: passwordField.text ?? "")
         
         ///Как сравнить 2 структуры, думаю есть какой-то еще способ?
-        if login.phoneNumber == Login.correctPassword.phoneNumber && login.password == Login.correctPassword.password {
-            
-            //Открываем след VC
-            performSegue(withIdentifier: "showProfile", sender: nil)
-            
+        if login == Login.correctPassword {
+            let proVC = createProfileVC(phone: phoneNumberField.text ?? "",
+                                        pass: passwordField.text ?? "", login: login)
+            proVC.delegate = self
+            navigationController?.pushViewController(proVC, animated: true)
         } else {
             //Показываем Алерт
             self.present(alert.Show(), animated: true)
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ProfileViewController {
-            vc.phone = phoneNumberField.text ?? ""
-            vc.pass = passwordField.text ?? ""
-        }
+    //MARK: - Factory pre-set
+    
+    private func createProfileVC(phone: String, pass: String, login: Login) -> ProfileViewController {
+        let vc = ProfileViewController.instantiate()
+        vc.phone = phone
+        vc.pass = pass
+        vc.login = login
+        return vc
+    }
+}
+
+extension ViewController: ProfileViewControllerDelegate {
+    func nameUpdated(vc: ProfileViewController, name: String) {
+        print(name)
+        titleLbl.text = name
     }
 }
 

@@ -7,8 +7,23 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class BaseViewController: UIViewController {
+    
+    
+}
 
+extension BaseViewController: Storyboarded {
+    
+}
+
+protocol ProfileViewControllerDelegate: AnyObject {
+    func nameUpdated(vc: ProfileViewController, name: String)
+}
+
+class ProfileViewController: BaseViewController {
+
+    weak var delegate: ProfileViewControllerDelegate?
+    
     @IBOutlet weak var nameLable: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nameInput: UITextField!
@@ -18,17 +33,23 @@ class ProfileViewController: UIViewController {
     var pass: String = ""
     var phone: String = ""
     
-    var login = Login()
-    var profile = Profile()
+    var login: Login?
     
-    ///Почему я не могу так установить значние?
-    //profile.login = login
-
-
+    private var profile:Profile?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let login {
+            profile = Profile(login: login)
+        }
+        print(profile)
+        delegate?.nameUpdated(vc: self, name: "JOhn")
     }
     
 
@@ -37,9 +58,10 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
-        profile.name = nameInput.text ?? ""
-        profile.surname = surNameInput.text ?? ""
-        profile.about = aboutInput.text ?? ""
-        nameLable.text = profile.name
+        profile?.name = nameInput.text ?? ""
+        profile?.surname = surNameInput.text ?? ""
+        profile?.about = aboutInput.text ?? ""
+        nameLable.text = profile?.name ?? ""
     }
 }
+

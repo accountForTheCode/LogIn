@@ -6,9 +6,18 @@
 //
 
 struct Profile {
-    var login: Login?
-    var phoneNumber: String { login?.phoneNumber ?? "" }
-    var password: String { login?.password ?? ""}
+    init(login: Login, name: String = "", surname: String = "", about: String = "") {
+        self.login = login
+        self.name = name
+        self.surname = surname
+        self.about = about
+    }
+    
+    let login: Login
+    
+    var phoneNumber: String { login.phoneNumber ?? "" }
+    var password: String { login.password ?? ""}
+    
     var name: String = ""
     var surname: String = ""
     var about: String = ""

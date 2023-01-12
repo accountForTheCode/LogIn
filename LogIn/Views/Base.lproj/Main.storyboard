@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xyX-VN-MuV">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="saU-9i-WOl">
+            <objects>
+                <navigationController id="xyX-VN-MuV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KCW-JW-Zd4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jwp-te-d0I" kind="relationship" relationship="rootViewController" id="FjQ-lR-em2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izX-aG-3mR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1755" y="203"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +39,7 @@
                                 <color key="textColor" red="0.55294117647058827" green="0.59999999999999998" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="+7 999 999 99 99" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="jXF-ya-jPl">
+                            <textField toolTip="ToolTipCust" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+79381440303" borderStyle="roundedRect" placeholder="+7 999 999 99 99" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="jXF-ya-jPl">
                                 <rect key="frame" x="16" y="123.5" width="288" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="d2h-6y-Y1X"/>
@@ -37,7 +53,7 @@
                                 <color key="textColor" red="0.55294117649999996" green="0.59999999999999998" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Apa-5o-oFD">
+                            <textField toolTip="ToolTipCust" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Apa-5o-oFD">
                                 <rect key="frame" x="16" y="210" width="288" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="mJL-xx-LmU"/>
@@ -59,7 +75,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="enterButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lzl-Tz-4hO"/>
-                                    <segue destination="fJs-IO-dCW" kind="show" identifier="showProfile" id="zkB-aR-JwI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-mo-yEu">
@@ -103,11 +118,12 @@
                     <connections>
                         <outlet property="passwordField" destination="Apa-5o-oFD" id="lbc-jt-gkY"/>
                         <outlet property="phoneNumberField" destination="jXF-ya-jPl" id="hRw-Zd-Rte"/>
+                        <outlet property="titleLbl" destination="TK8-mo-yEu" id="oy5-hI-rRE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-555" y="96"/>
+            <point key="canvasLocation" x="-214" y="-446"/>
         </scene>
         <!--Изменить пароль-->
         <scene sceneID="ALv-nT-Tzk">
@@ -130,8 +146,7 @@
         <!--Профиль-->
         <scene sceneID="uYH-Wo-Kwu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mXd-ve-14q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController modalPresentationStyle="fullScreen" id="fJs-IO-dCW" customClass="ProfileViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fJs-IO-dCW" customClass="ProfileViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YTL-oe-Xgk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +176,7 @@
                                                         <color key="textColor" red="0.55294117649999996" green="0.59999999999999998" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="Введите имя" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="mgY-gs-Xun">
+                                                    <textField toolTip="ToolTipCust" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="mgY-gs-Xun">
                                                         <rect key="frame" x="0.0" y="27.5" width="288" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="Uu7-fO-3K5"/>
@@ -184,7 +199,7 @@
                                                         <color key="textColor" red="0.55294117649999996" green="0.59999999999999998" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="Введите фамилию" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="pvD-qE-ePk">
+                                                    <textField toolTip="ToolTipCust" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите фамилию" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="pvD-qE-ePk">
                                                         <rect key="frame" x="0.0" y="24.5" width="288" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="ZZ7-g0-uj4"/>
@@ -205,7 +220,7 @@
                                                         <color key="textColor" red="0.55294117649999996" green="0.59999999999999998" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="ToolTipCust" borderStyle="roundedRect" placeholder="Введите информацию о себе" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="f6n-mT-hBG">
+                                                    <textField toolTip="ToolTipCust" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите информацию о себе" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="f6n-mT-hBG">
                                                         <rect key="frame" x="0.0" y="24.5" width="288" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="VS6-mF-CAX"/>
@@ -255,7 +270,7 @@
                         <viewLayoutGuide key="safeArea" id="xbg-4H-Mq4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="da1-kh-P24" firstAttribute="top" secondItem="xbg-4H-Mq4" secondAttribute="top" id="0d4-ty-7cg"/>
+                            <constraint firstItem="da1-kh-P24" firstAttribute="top" secondItem="YTL-oe-Xgk" secondAttribute="top" id="0d4-ty-7cg"/>
                             <constraint firstAttribute="trailing" secondItem="tpH-eh-Yrd" secondAttribute="trailing" id="COS-Nj-Mqs"/>
                             <constraint firstItem="tpH-eh-Yrd" firstAttribute="leading" secondItem="YTL-oe-Xgk" secondAttribute="leading" id="DyX-EP-UgE"/>
                             <constraint firstItem="xbg-4H-Mq4" firstAttribute="trailing" secondItem="u3x-QH-H2S" secondAttribute="trailing" constant="16" id="E4Z-cB-Ivn"/>
@@ -281,13 +296,14 @@
                         <outlet property="surNameInput" destination="pvD-qE-ePk" id="9OL-b7-1v0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXd-ve-14q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832.5" y="691.90140845070425"/>
+            <point key="canvasLocation" x="739" y="95"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="pr8-Q7-VmZ">
             <objects>
-                <tabBarController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="Jwp-te-d0I" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jwp-te-d0I" customClass="MainTabBarController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Fkw-2Z-le5"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wwi-Hj-bng">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
@@ -301,12 +317,9 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMW-NH-ToU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="986"/>
+            <point key="canvasLocation" x="-908" y="203"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zkB-aR-JwI"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="BackgroundProfile" width="320" height="82"/>
         <image name="Profile" width="20" height="20"/>

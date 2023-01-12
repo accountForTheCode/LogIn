@@ -13,3 +13,9 @@ struct Login {
 extension Login {
     static var correctPassword = Login(phoneNumber: "+79381440303", password: "1")
 }
+
+extension Login: Equatable {
+    static func ==(lhs: Self, rhs: Self) -> Bool {
+        return lhs.phoneNumber == rhs.phoneNumber && lhs.password == rhs.password
+    }
+}
