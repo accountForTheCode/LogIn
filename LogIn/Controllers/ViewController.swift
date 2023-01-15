@@ -7,9 +7,13 @@
 
 import UIKit
 
+class BaseViewController: UIViewController {
+    
+}
+
 class ViewController: BaseViewController {
 
-    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var phoneNumberField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
@@ -48,8 +52,11 @@ class ViewController: BaseViewController {
 
 extension ViewController: ProfileViewControllerDelegate {
     func nameUpdated(vc: ProfileViewController, name: String) {
-        print(name)
-        titleLbl.text = name
+        titleLable.text = name
     }
+}
+
+extension BaseViewController: Storyboarded {
+    
 }
 

@@ -7,19 +7,6 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
-    
-    
-}
-
-extension BaseViewController: Storyboarded {
-    
-}
-
-protocol ProfileViewControllerDelegate: AnyObject {
-    func nameUpdated(vc: ProfileViewController, name: String)
-}
-
 class ProfileViewController: BaseViewController {
 
     weak var delegate: ProfileViewControllerDelegate?
@@ -35,7 +22,7 @@ class ProfileViewController: BaseViewController {
     
     var login: Login?
     
-    private var profile:Profile?
+    private var profile: Profile?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,13 +32,11 @@ class ProfileViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        
         if let login {
             profile = Profile(login: login)
         }
-        print(profile)
-        delegate?.nameUpdated(vc: self, name: "JOhn")
     }
-    
 
     @IBAction func nameTextFieldAction(_ sender: Any) {
         saveButton.isEnabled = true
@@ -62,6 +47,12 @@ class ProfileViewController: BaseViewController {
         profile?.surname = surNameInput.text ?? ""
         profile?.about = aboutInput.text ?? ""
         nameLable.text = profile?.name ?? ""
+        
+        delegate?.nameUpdated(vc: self, name: nameInput.text ?? "")
     }
+}
+
+protocol ProfileViewControllerDelegate: AnyObject {
+    func nameUpdated(vc: ProfileViewController, name: String)
 }
 
