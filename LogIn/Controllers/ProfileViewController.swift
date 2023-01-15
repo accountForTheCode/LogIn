@@ -26,12 +26,10 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         
         if let login {
             profile = Profile(login: login)
@@ -48,11 +46,9 @@ class ProfileViewController: BaseViewController {
         profile?.about = aboutInput.text ?? ""
         nameLable.text = profile?.name ?? ""
         
-        delegate?.nameUpdated(vc: self, name: nameInput.text ?? "")
+        delegate?.nameUpdated(name: nameInput.text ?? "")
     }
 }
 
-protocol ProfileViewControllerDelegate: AnyObject {
-    func nameUpdated(vc: ProfileViewController, name: String)
-}
+
 

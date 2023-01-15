@@ -27,10 +27,12 @@ class ViewController: BaseViewController {
     @IBAction func enterButtonAction(_ sender: Any) {
         let login = Login(phoneNumber: phoneNumberField.text ?? "", password: passwordField.text ?? "")
         
-        ///Как сравнить 2 структуры, думаю есть какой-то еще способ?
+        ///Проверка на правильность пароля
         if login == Login.correctPassword {
+            //Создание экземпляра ProfileViewController
             let proVC = createProfileVC(phone: phoneNumberField.text ?? "",
                                         pass: passwordField.text ?? "", login: login)
+            //Подписваем на делегат
             proVC.delegate = self
             navigationController?.pushViewController(proVC, animated: true)
         } else {
@@ -40,7 +42,7 @@ class ViewController: BaseViewController {
     }
     
     //MARK: - Factory pre-set
-    
+    //Прокидывание данных в след VC
     private func createProfileVC(phone: String, pass: String, login: Login) -> ProfileViewController {
         let vc = ProfileViewController.instantiate()
         vc.phone = phone
@@ -50,12 +52,18 @@ class ViewController: BaseViewController {
     }
 }
 
+protocol ProfileViewControllerDelegate: AnyObject {
+    func nameUpdated(name: String)
+}
+
+//
 extension ViewController: ProfileViewControllerDelegate {
-    func nameUpdated(vc: ProfileViewController, name: String) {
+    func nameUpdated(name: String) {
         titleLable.text = name
     }
 }
 
+//Расширение чтобы работал протокол Storyboarded
 extension BaseViewController: Storyboarded {
     
 }
