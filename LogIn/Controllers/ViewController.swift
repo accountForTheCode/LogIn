@@ -34,7 +34,11 @@ class ViewController: BaseViewController {
                                         pass: passwordField.text ?? "", login: login)
             //Подписваем на делегат
             proVC.delegate = self
-            navigationController?.pushViewController(proVC, animated: true)
+            
+            let navVC = UINavigationController.init(rootViewController: proVC)
+            present(navVC, animated: false)
+            
+            //navigationController?.pushViewController(proVC, animated: true)
         } else {
             //Показываем Алерт
             self.present(alert.Show(), animated: true)
@@ -52,13 +56,9 @@ class ViewController: BaseViewController {
     }
 }
 
-protocol ProfileViewControllerDelegate: AnyObject {
-    func nameUpdated(name: String)
-}
-
 //
 extension ViewController: ProfileViewControllerDelegate {
-    func nameUpdated(name: String) {
+    func nameUpdated(vc: ProfileViewController, name: String) {
         titleLable.text = name
     }
 }

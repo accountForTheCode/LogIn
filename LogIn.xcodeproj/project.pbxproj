@@ -19,6 +19,7 @@
 		D5C1432A296C991B00C24CFF /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C14329296C991B00C24CFF /* Alerts.swift */; };
 		D5C1432C296CA08400C24CFF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C1432B296CA08400C24CFF /* ProfileViewController.swift */; };
 		D5C1432E296CA30400C24CFF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C1432D296CA30400C24CFF /* Profile.swift */; };
+		D5C1433029785E4000C24CFF /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C1432F29785E4000C24CFF /* ChangePasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D5C14329296C991B00C24CFF /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		D5C1432B296CA08400C24CFF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D5C1432D296CA30400C24CFF /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		D5C1432F29785E4000C24CFF /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				D5C14314296AE18200C24CFF /* ViewController.swift */,
 				D5C1432B296CA08400C24CFF /* ProfileViewController.swift */,
 				9098F92B29704C20000E0EC8 /* MainTabBarController.swift */,
+				D5C1432F29785E4000C24CFF /* ChangePasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				D5C1432C296CA08400C24CFF /* ProfileViewController.swift in Sources */,
 				D5C14315296AE18200C24CFF /* ViewController.swift in Sources */,
 				9098F92C29704C20000E0EC8 /* MainTabBarController.swift in Sources */,
+				D5C1433029785E4000C24CFF /* ChangePasswordViewController.swift in Sources */,
 				D5C14311296AE18200C24CFF /* AppDelegate.swift in Sources */,
 				D5C1432E296CA30400C24CFF /* Profile.swift in Sources */,
 				D5C14313296AE18200C24CFF /* SceneDelegate.swift in Sources */,

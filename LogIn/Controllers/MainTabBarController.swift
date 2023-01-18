@@ -18,7 +18,7 @@ final class MainTabBarController: UITabBarController {
         if true {
             let loginVC = createLoginVC()
             let navVC = UINavigationController.init(rootViewController: loginVC)
-            navVC.isNavigationBarHidden = false
+            navVC.isNavigationBarHidden = true
             navVC.modalPresentationStyle = .fullScreen
             present(navVC, animated: false)
         }

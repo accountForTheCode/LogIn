@@ -46,8 +46,12 @@ class ProfileViewController: BaseViewController {
         profile?.about = aboutInput.text ?? ""
         nameLable.text = profile?.name ?? ""
         
-        delegate?.nameUpdated(name: nameInput.text ?? "")
+        delegate?.nameUpdated(vc: self, name: nameInput.text ?? "")
     }
+}
+
+protocol ProfileViewControllerDelegate: AnyObject {
+    func nameUpdated(vc: ProfileViewController, name: String)
 }
 
 

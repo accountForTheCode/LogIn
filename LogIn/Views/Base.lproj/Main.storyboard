@@ -123,17 +123,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="-446"/>
+            <point key="canvasLocation" x="34" y="-177"/>
         </scene>
         <!--Изменить пароль-->
         <scene sceneID="ALv-nT-Tzk">
             <objects>
-                <viewController id="1mJ-2E-sHw" sceneMemberID="viewController">
+                <viewController id="1mJ-2E-sHw" customClass="ChangePasswordViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wBa-4H-0dc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="prO-5Q-Ifu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Изменить пароль" id="Xhf-eR-64B">
                         <imageReference key="image" image="wallet.pass" catalog="system" symbolScale="small"/>
@@ -141,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30L-kW-6if" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="1374"/>
+            <point key="canvasLocation" x="-1755" y="1004"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="uYH-Wo-Kwu">
@@ -298,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXd-ve-14q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="95"/>
+            <point key="canvasLocation" x="-9" y="1004"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="pr8-Q7-VmZ">
@@ -327,6 +327,9 @@
         <image name="wallet.pass" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
